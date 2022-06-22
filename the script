@@ -1,0 +1,12 @@
+game.Workspace.Part.ParticleEmitter.Enabled = false
+
+local prt = game.Workspace.Part
+local prtcle = game.Workspace.Part.ParticleEmitter
+
+local function waterSplash(waterTouched)
+    game.Workspace.Part.ParticleEmitter.Enabled = true
+    wait(0.5)
+    game.Workspace.Part.ParticleEmitter.Enabled = false
+end
+
+prt.Touched:Connect(waterSplash)
